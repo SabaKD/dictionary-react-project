@@ -5,8 +5,9 @@
     border-radius: 20px;
     max-width: 600px;
 }
-.submit-form{
+.Dictionary .submit-form{
     height: 38px !important;
     font-size: 12px;
     padding-left: 10px;
+    border-radius: 20px !important;
 }

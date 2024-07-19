@@ -15,7 +15,8 @@ export default function App() {
         </main>
         <footer>
           <small>
-          Coded by Saba 
+          Coded by Saba and it is open-sourced on {" "}
+          <a href='https://github.com/SabaKD/dictionary-react-project'>Github</a>
           </small>
         </footer>
       </div>
