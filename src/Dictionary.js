@@ -5,14 +5,18 @@ import SearchEngine from "./SearchEngine";
 
 export default function Dictionary(){
     let [keyword, setKeyword] = useState("");
-    let [data, setData] = useState({});
+
+    let [data, setData] = useState({loaded: false});
 
     function handleResponse(response){
-        // console.log(response.data);
+        
         setData({
-            word: response.data.word,
-            phonetic: response.data.phonetic
+            loaded :true,
+            result: response.data
+            
+            
         })
+        
 
     }
 
@@ -29,8 +33,8 @@ export default function Dictionary(){
         setKeyword(event.target.value);
 
     }
-
-    return(
+    if(data.loaded){
+        return(
         <div className="Dictionary">
             <div className="container">
             <form onSubmit={handleSubmit}>
@@ -44,9 +48,33 @@ export default function Dictionary(){
                 </div>
 
             </form>
-            <SearchEngine data={data}/>
+            <SearchEngine data={data.result}/>
             </div>
             
         </div>
     );
+    } else {
+        return(
+        <div className="Dictionary">
+            <div className="container">
+            <form onSubmit={handleSubmit}>
+                <div className="row">
+                    <div className="col-9">
+                        <input type="search" placeholder="Enter a city.." autoFocus={true} onChange={handleKeywordChange} className="w-100 submit-form"/>
+                    </div>
+                    <div className="col-3">
+                        <input type="submit" value="Search" className="btn btn-primary w-100"/>
+                    </div>
+                </div>
+
+            </form>
+            
+            </div>
+            
+        </div>
+    );
+
+    }
+
+    
 }

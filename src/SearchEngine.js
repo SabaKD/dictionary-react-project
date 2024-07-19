@@ -1,10 +1,34 @@
 import React from "react";
+import "./SearchEngine.css"
+import Meaning from "./Meaning";
 
 export default function SearchEngine(props){
-    console.log(props.data);
+
+
+    if(props.data){
     return(
-        <div>
-            loading results
+        <div className="SearchEngine">
+            <div className="word">
+                {props.data.word}
+            </div>
+            <div className="phonethic">
+                /{props.data.phonetic}/
+            </div>
+            <div className="meaning">
+                {props.data.meanings.map(function (meaning, index){
+                    
+                    return (
+                        <div>
+                           
+                        <Meaning meaning={meaning} index={index}/>
+                        </div>
+
+                    );
+                })}
+                
+                
+            </div>
         </div>
-    )
+        
+    );} else {return null}
 }

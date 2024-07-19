@@ -1,0 +1,50 @@
+.SearchEngine{
+    text-align: left;
+}
+.SearchEngine .word{
+    text-transform: capitalize;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.SearchEngine .phonetic {
+    
+    font-size: 18px;
+    font-weight: 100;
+
+    
+}
+.SearchEngine .meaning{
+    margin-top: 20px;
+}
+.SearchEngine .meaning .part-of-speech{
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 100;
+    font-style: italic;
+    color: rgb(87, 87, 87);
+}
+.SearchEngine .meaning .definition {
+    font-size: 15px;
+    font-weight: 400;
+    padding-left: 20px;
+    color: rgb(0, 0, 0);
+}
+.SearchEngine .meaning .example {
+    font-size: 15px;
+    font-weight: 400;
+    padding-left: 20px;
+    color: rgb(87, 87, 87);
+}
+.SearchEngine .meaning .tags{
+    text-transform: capitalize;
+    margin: 10px 20px;
+}
+.SearchEngine .meaning .tag{
+    font-size: 12px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 20px;
+    
+}
