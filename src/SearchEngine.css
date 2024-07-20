@@ -36,15 +36,4 @@
     padding-left: 20px;
     color: rgb(87, 87, 87);
 }
-.SearchEngine .meaning .tags{
-    text-transform: capitalize;
-    margin: 10px 20px;
-}
-.SearchEngine .meaning .tag{
-    font-size: 12px;
-    margin-right: 5px;
-    padding: 5px 10px;
-    border: 1px solid;
-    border-radius: 20px;
-    
-}
+

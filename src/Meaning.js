@@ -1,4 +1,6 @@
 import React from "react";
+import Synonym from "./Synonym";
+import "./Meaning.css"
 
 
 export default function Meaning(props){
@@ -8,6 +10,25 @@ export default function Meaning(props){
                 <div className="example">
                 "{props.meaning.example}"
             </div>
+            );
+        } else return null
+    }
+    function synonymChecker(){
+        console.log(props.meaning.synonyms);
+        if(props.meaning.synonyms){
+            return (
+                <div className="syns">
+                    {props.meaning.synonyms.map(function (synonym, index){
+                    
+                    return (
+                        <span>
+                        
+                        <Synonym synonym={synonym} index={index}/>
+                        </span>
+
+                    );
+                })}
+                </div>
             );
         } else return null
     }
@@ -21,6 +42,7 @@ export default function Meaning(props){
                 {props.meaning.definition}.
             </div>
             {exampleChecker()}
+            {synonymChecker()}
         </div>
     );}
 }

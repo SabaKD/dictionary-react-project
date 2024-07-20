@@ -18,7 +18,7 @@ export default function SearchEngine(props){
                 {props.data.meanings.map(function (meaning, index){
                     
                     return (
-                        <div>
+                        <div key={index}>
                            
                         <Meaning meaning={meaning} index={index}/>
                         </div>
@@ -28,6 +28,7 @@ export default function SearchEngine(props){
                 
                 
             </div>
+            
         </div>
         
     );} else {return null}
