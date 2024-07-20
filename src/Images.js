@@ -8,7 +8,7 @@ export default function Images(props){
         <h2 className="titleForImageSection">Images Related <strong>{props.keyword}</strong></h2>
         <div className="images">
             {props.image.map(function (eachImage, index){
-                    if(index<5){
+                    if(index<9){
                     return (
                         <span key={index}>
                            <img src={eachImage.src.landscape} alt={props.keyword} className="image"/>
