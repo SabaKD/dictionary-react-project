@@ -11,3 +11,15 @@
     padding-left: 10px;
     border-radius: 10px !important;
 }
+.Dictionary .pictures .titleForImageSection{
+    text-align: left;
+    text-transform: capitalize;
+}
+.Dictionary .pictures .images{
+    text-align: left;
+}
+.Dictionary .pictures .images .image{
+    max-width: 150px;
+    margin: 10px;
+    border-radius: 10px;
+}

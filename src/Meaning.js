@@ -14,14 +14,14 @@ export default function Meaning(props){
         } else return null
     }
     function synonymChecker(){
-        console.log(props.meaning.synonyms);
+        
         if(props.meaning.synonyms){
             return (
                 <div className="syns">
                     {props.meaning.synonyms.map(function (synonym, index){
                     
                     return (
-                        <span>
+                        <span key={index}>
                         
                         <Synonym synonym={synonym} index={index}/>
                         </span>
